@@ -1,62 +1,166 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript" target="_blank" rel="noopener">typescript</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <v-container>
+    <v-row class="text-center">
+      <v-col cols="4">
+        <h1>Applied</h1>
+        <v-container 
+            v-for="item in list"
+            :key="item.id"
+          >
+          <v-card            
+            v-if="item.status == 'Applied'"
+            class="mx-auto my-12"
+            max-width="374"
+          >
+            <v-card-title>
+              {{ item.name }}
+            </v-card-title>
+
+            <v-card-text>
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.last_updated_at }}
+                </div>
+              </v-row>
+
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.location }}
+                </div>
+              </v-row>
+
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.gender }}
+                </div>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-container>
+      </v-col>
+
+      <v-col cols="4">
+        <h1>Accepted</h1>
+        <v-container 
+            v-for="item in list"
+            :key="item.id"
+          >
+          <v-card            
+            v-if="item.status == 'Accepted'"
+            class="mx-auto my-12"
+            max-width="374"
+          >
+            <v-card-title>
+              {{ item.name }}
+            </v-card-title>
+
+            <v-card-text>
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.last_updated_at }}
+                </div>
+              </v-row>
+
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.location }}
+                </div>
+              </v-row>
+
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.gender }}
+                </div>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-container>
+      </v-col>
+
+      <v-col cols="4">
+        <h1>Rejected</h1>
+        <v-container 
+            v-for="item in list"
+            :key="item.id"
+          >
+          <v-card            
+            v-if="item.status == 'Rejected'"
+            class="mx-auto my-12"
+            max-width="374"
+          >
+            <v-card-title>
+              {{ item.name }}
+            </v-card-title>
+
+            <v-card-text>
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.last_updated_at }}
+                </div>
+              </v-row>
+
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.location }}
+                </div>
+              </v-row>
+
+              <v-row align="center" class="mx-0">
+                <img src="https://via.placeholder.com/18x18" width="14px" />
+
+                <div class="ms-4">
+                  {{ item.gender }}
+                </div>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-container>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-
-export default Vue.extend({
-  name: 'HelloWorld',
-  props: {
-    msg: String,
+<script>
+import Vue from "vue";
+import VueAxios from "vue-axios";
+import axios from "axios";
+Vue.use(VueAxios, axios);
+export default {
+  name: "HelloWorld",
+  data() {
+    return {
+      list: undefined,
+    };
   },
-});
+  mounted() {
+    Vue.axios
+      .get("https://run.mocky.io/v3/ae511409-8c0e-40ed-9336-aebcb602823d")
+      .then((response) => {
+        this.list = response.data.data;       
+        console.warn(response.data.data);
+      });
+  },
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+<style>
+.container{
+  padding: 0px;
 }
 </style>
